@@ -1,7 +1,7 @@
 from os import path
 from setuptools import find_packages, setup
 
-VERSION = (0, 0, 5)
+VERSION = (0, 0, 7)
 
 here = path.abspath(path.dirname(__file__))
 
@@ -36,5 +36,7 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     keywords='addok',
+    packages=find_packages(exclude=['tests']),
+    include_package_data=True,
     entry_points={'addok.ext': ['getbyid=addok_getbyid']},
 )
