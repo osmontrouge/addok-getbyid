@@ -5,7 +5,7 @@ VERSION = (0, 0, 5)
 
 here = path.abspath(path.dirname(__file__))
 
-# Get the long description trigramsom the relevant file
+# Get the long description from the relevant file
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
@@ -36,7 +36,5 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     keywords='addok',
-    packages=find_packages(exclude=['tests']),
-    include_package_data=True,
     entry_points={'addok.ext': ['getbyid=addok_getbyid']},
 )
